@@ -1,10 +1,10 @@
-<?xml version="1.2" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plugin name="clients_on_map">
 	<title>Our clients</title>
 	<summary>Our clients (Google Map plugin)</summary>
 	<author>Intelliants LLC</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>1.0.0</version>
+	<version>1.2.0</version>
 	<date>2016-02-06</date>
 	<category>maps</category>
 	<compatibility>3.3</compatibility>
