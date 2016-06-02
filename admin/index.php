@@ -55,8 +55,8 @@ class iaBackendController extends iaAbstractControllerPluginBackend
 	protected function _setDefaultValues(array &$entry)
 	{
 		$entry['lang'] = $this->_iaCore->iaView->language;
-		$entry['lat'] = 0;
-		$entry['lng'] = 0;
+		$entry['lat'] = 37.09024;
+		$entry['lng'] = -95.71289100000001;
 	}
 
 }
