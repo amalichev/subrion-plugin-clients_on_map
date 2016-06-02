@@ -47,7 +47,7 @@
 CREATE TABLE IF NOT EXISTS `{prefix}clients_on_map` (
 	`id` mediumint(7) unsigned NOT NULL auto_increment,
 	`client` tinytext NOT NULL,
-	`address` text,
+	`address` tinytext,
 	`lat` tinytext,
 	`lng` tinytext,
 	`lang` char(2) NOT NULL,
