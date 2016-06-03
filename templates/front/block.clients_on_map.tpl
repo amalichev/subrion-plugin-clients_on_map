@@ -19,6 +19,11 @@
 				var bounds = new google.maps.LatLngBounds();
 
 				{foreach $clients_on_map as $entry}
+					{if empty($entry.address)} 
+						{assign var="content" value="<strong>{$entry.client}</strong>"}
+					{else}
+						{assign var="content" value="<strong>{$entry.client}</strong><br>{$entry.address}"}
+					{/if}
 					var item{$entry.id} = new google.maps.LatLng({$entry.lat}, {$entry.lng});
 					var marker{$entry.id} = new google.maps.Marker({
 						position: item{$entry.id},
@@ -26,13 +31,8 @@
 						title: '{$entry.client}',
 						icon: '/plugins/clients_on_map/templates/front/img/marker.png',
 						info: new google.maps.InfoWindow({
-							{if empty($entry.address)} 
-								content: {json_encode($entry.client)}
-							{else}
-								content: {json_encode($entry.address)}
-							{/if}
+							content: {json_encode($content)}
 						})
-
 					});
 					bounds.extend(item{$entry.id});
 
