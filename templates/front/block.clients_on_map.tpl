@@ -28,7 +28,7 @@
 					var marker{$entry.id} = new google.maps.Marker({
 						position: item{$entry.id},
 						map: map,
-						title: '{$entry.client}',
+						title: '{$entry.client|escape:'html'}',
 						icon: '/plugins/clients_on_map/templates/front/img/marker.png',
 						info: new google.maps.InfoWindow({
 							content: {json_encode($content)}
